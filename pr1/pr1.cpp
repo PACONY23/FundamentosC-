@@ -12,7 +12,11 @@ double divisiones(double num1, double num2);
 short radiantes(short num1, short num2);
 int invercionDeDigitos5(int num1);
 int contadorDigitos(int num1);
-
+int sumaDeNumerosDeN(int num1);
+double areaCirculo(double radio);
+void SegundosADatos(int segundos);
+int numerosParesDeDos(int num1, int num2);
+int metrosADatos(int milimetros);
 
 int main(){
     std::cout<<"En este programa se veran diferentes problemas de logica basica"<<std::endl;
@@ -136,3 +140,39 @@ int contadorDigitos(int num1){
     return digitos;
 }
 
+int sumaDeNumerosDeN(int num1){
+    return (num1*(num1+1))/2;
+}
+
+double areaCirculo(double radio){
+    return pow(radio,2)*(3.1416);
+}
+
+void SegundosADatos(int segundos){
+    const int hora = 3600;
+    const int minutos = 60;
+
+    std::cout<<"Segundos: "<<segundos<<std::endl;
+    std::cout<<"Minutos: "<<segundos/minutos<<std::endl;
+    std::cout<<"Horas: "<<segundos/hora<<std::endl;
+}
+
+int numerosParesDeDos(int num1, int num2){
+    int contador=0;
+    if(num1%2 == 0){
+        contador+=1;
+    }
+    if(num2%2 == 0){
+        contador+=1;
+    }
+    return contador;
+}
+
+int metrosADatos(int num){
+    const int metro = 100;
+    const int decimetros = 10;
+    const int centimetros = 100;
+    const int milimetros = 1000;
+
+    std::cout<<"Metros: "<<
+}
