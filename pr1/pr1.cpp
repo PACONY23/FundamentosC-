@@ -17,6 +17,11 @@ double areaCirculo(double radio);
 void SegundosADatos(int segundos);
 int numerosParesDeDos(int num1, int num2);
 int metrosADatos(int milimetros);
+void cuantosEnterosPares(int num1, int num2);
+int contadorDeEnterosPares(int num);
+void solucionDeFormulas(double num1, double num2);
+double primerFormula(double num1, double num2);
+double segundaFormula(double num1, double num2, double num3);
 
 int main(){
     std::cout<<"En este programa se veran diferentes problemas de logica basica"<<std::endl;
@@ -174,5 +179,39 @@ int metrosADatos(int num){
     const int centimetros = 100;
     const int milimetros = 1000;
 
-    std::cout<<"Metros: "<<
+    std::cout<<"Metros: "<<num/metro;
+}
+
+void cuantosEnterosPares(int num1, int num2){
+    std::cout<<"Numero1 enteros: "<<contadorDeEnterosPares(num1)<<std::endl;
+    std::cout<<"Numero2 enteros: "<<contadorDeEnterosPares(num2)<<std::endl;
+}
+
+int contadorDeEnterosPares(int num){
+    int contador = 0;
+    if (num < 10){
+        if(num % 2 == 0){
+            contador++;
+        }
+    }else{
+        while (num > 0){
+            int digito = num % 10;
+            num = num / 10;
+            if(digito % 2 == 0){
+                contador++;
+            }
+        }
+    }
+    return contador;
+}
+
+void solucionDeFormulas(double num1, double num2){
+    std::cout<<"Respuesta de la primer formula: "<<primerFormula(num1, num2)<<std::endl;
+    std::cout<<"Respuesta de la segunda formula: "<<segundaFormula(num1, num2, primerFormula(num1, num2))<<std::endl;
+}
+double primerFormula(double num1, double num2){
+    return ((4*(pow(num1, 4))+(3*num2*num1)+(pow(num2, 2)))/(pow(num1, 2)-(pow(num2, 2))));
+}
+double segundaFormula(double num1, double num2, double num3){
+    return ((3*(pow(num3, 2)))+(num1)+(num2))/(4);
 }
