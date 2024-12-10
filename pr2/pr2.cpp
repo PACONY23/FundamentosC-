@@ -4,6 +4,8 @@
 
 int entradaEntero();
 int cualNumeroEsMayor(int num1, int num2);
+void tiposDeumeros(int num);
+void vocales(char letra);
 
 int main(){
 
@@ -33,5 +35,29 @@ int cualNumeroEsMayor(int num1, int num2){
         return num1;
     }else{
         return num2;
+    }
+}
+void tiposDeumeros(int num){
+    if(num == 0){
+        std::cout<<"El numero "<<num<<"es NEUTRO";
+    }else if(num > 0){
+        std::cout<<"El numero "<<num<<"es POSITIVO";
+    }else if(num < 0){
+        std::cout<<"El numero "<<num<<"es NEGATIVO";
+    }
+}
+void vocales(char letra){
+    if (letra == 'a' || letra == 'A'){
+        std::cout<<letra<<" Es vocal";
+    }else if(leta == 'e' || letra == 'E'){
+        std::cout<<letra<<" Es vocal";
+    }else if(letra == 'i' || letra == 'I'){
+        std::cout<<letra<<" Es vocal";
+    }else if(letra == 'o' || letra == 'O'){
+        std::cout<<letra<<" Es vocal";
+    }else if(letra == 'u' || letra == 'U'){
+        std::cout<<letra<<" Es vocal";
+    }else{
+        std::cout<<"La letra no es vocal";
     }
 }
