@@ -22,6 +22,8 @@ int contadorDeEnterosPares(int num);
 void solucionDeFormulas(double num1, double num2);
 double primerFormula(double num1, double num2);
 double segundaFormula(double num1, double num2, double num3);
+void saludo();
+}
 
 int main(){
     std::cout<<"En este programa se veran diferentes problemas de logica basica"<<std::endl;
@@ -214,4 +216,10 @@ double primerFormula(double num1, double num2){
 }
 double segundaFormula(double num1, double num2, double num3){
     return ((3*(pow(num3, 2)))+(num1)+(num2))/(4);
+}
+
+void saludo(){
+    std::cout<<"Hola este programa se encarga de mejorar"<<std::endl;
+    std::cout<<"los probelmas propuestos en el libro"<<std::endl;
+    std::cout<<"Fundamentos de programacion en C++"<<std::endl;
 }
