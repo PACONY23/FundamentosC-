@@ -11,7 +11,7 @@ void parImpar(int num);
 int cualNumeroMayor3(int num1, int num2, int num3);
 int dobleOTriple(int num1);
 void ordenABS(int num1, int num2, int num3);
-
+double descuento(double num);
 
 int main(){
 
@@ -122,4 +122,17 @@ void ordenABS(int num1, int num2, int num3){
     std::cout<<"Mayor: "<<mayor<<std::endl;
     std::cout<<"Intermedio: "<<intermedio<<std::endl;
     std::cout<<"Menor: "<<menor<<std::endl;
+}
+double descuento(double num){
+    double descuento, iva;
+    if (num < 100){
+        descuento = num * 0.10;
+        iva = descuento * 0.19;
+        num = (num - descuento) + iva;
+    }else if(num > 100){
+        descuento = num * 0.20;
+        iva = descuento * 0.19;
+        num = (num - descuento) + iva;
+    }
+    return num;
 }
